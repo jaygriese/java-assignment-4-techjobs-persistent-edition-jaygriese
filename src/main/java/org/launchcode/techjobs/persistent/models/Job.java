@@ -10,7 +10,7 @@ public class Job extends AbstractEntity{
     @ManyToMany
     private List<Skill> skills;
 
-    private String name;
+    //private String name;
 
     @ManyToOne
     private Employer employer;
@@ -24,13 +24,13 @@ public class Job extends AbstractEntity{
         this.skills = someSkills;
     }
 
-    public String getName() {
-        return name;
-    }
+    //public String getName() {
+     //   return name;
+    //}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    //public void setName(String name) {
+    //    this.name = name;
+   // }
 
     public Employer getEmployer() {
         return employer;

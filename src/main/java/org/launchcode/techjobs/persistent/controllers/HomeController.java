@@ -30,12 +30,14 @@ public class HomeController {
     private EmployerRepository employerRepository;
 
 
+//    @GetMapping("")
     @RequestMapping("")
     public String index(Model model) {
+
         model.addAttribute("jobs", jobRepository.findAll());
+
         return "index";
     }
-
 
     @GetMapping("add")
     public String displayAddJobForm(Model model) {
@@ -57,7 +59,6 @@ public class HomeController {
         List<Skill> skill = (List<Skill>)skillRepository.findAllById(skills);
        newJob.setSkills(skill);
        jobRepository.save(newJob);
-
         return "redirect:";
     }
 
